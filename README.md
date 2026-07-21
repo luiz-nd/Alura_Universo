@@ -11,12 +11,12 @@
 
 * 🪐 **Álbum do Sistema Solar:** Figurinhas interativas de planetas e corpos celestes com informações detalhadas e efeito visual no *hover* (escurecimento e destaque do slot).
 * ⚡ **API FastAPI:** Servidor backend com CORS totalmente habilitado e gerenciamento dinâmico de arquivos de imagem via endpoint (`/figurinhas/{id}/imagem`).
-* 📸 **Figurinha Personalizada (#30):** Tratamento dinâmico para o slot do usuário, pronto para receber uploads.
-* 🛠️ **Arquitetura Sólida:** Mapeamento automático por `glob` e tratamento de erros (HTTP 404) para imagens não encontradas.
+*  **Figurinha Personalizada (#30):** Tratamento dinâmico para o slot do usuário, pronto para receber uploads.
+*  **Arquitetura Sólida:** Mapeamento automático por `glob` e tratamento de erros (HTTP 404) para imagens não encontradas.
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 | Camada | Tecnologia |
 | :--- | :--- |

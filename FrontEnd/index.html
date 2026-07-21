@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Album - Universo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
+        🌓 Trocar tema
+    </button>
+
+    <!-- Sound Control -->
+    <button id="sound-toggle" class="sound-btn" aria-label="Alternar som">
+        <svg class="sound-icon-on" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+                d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+        </svg>
+        <svg class="sound-icon-off hidden" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+                d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.5C15.58,18 14.83,18.4 14,18.71V20.77C15.38,20.44 16.63,19.78 17.7,18.9L20.73,21.93L22,20.66L4.27,3M14,3.23V5.29C14.73,5.5 15.43,5.83 16.07,6.26L14.59,7.74C14.41,7.65 14.21,7.58 14,7.54V9.54L19,14.54C19,13.7 19,12.85 19,12C19,7.72 16,4.14 14,3.23M16.5,12C16.5,11.2 16.1,10.5 15.5,10.05L14,11.55V12.45L15.46,13.9C15.48,13.28 16.5,12.62 16.5,12Z" />
+        </svg>
+    </button>
+
+    <!-- Navigation Arrows -->
+    <button id="btn-prev" class="nav-btn nav-btn-left" aria-label="Página Anterior">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>
+    </button>
+    <button id="btn-next" class="nav-btn nav-btn-right" aria-label="Próxima Página">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+    </button>
+
+    <!-- Album Container -->
+    <div class="album-viewport" id="album-viewport">
+        <div class="flip-book" id="book">
+
+            <!-- PAGINA 0: CAPA -->
+            <div class="page page-cover" data-density="hard">
+                <div class="page-content cover-content">
+                    <div class="cover-header">
+                        <span class="cover-seal">COLEÇÃO CÓSMICA</span>
+                    </div>
+                    <div class="cover-body">
+                        <h1 class="cover-title glitch" data-text="ALURA">ALURA</h1>
+                        <h2 class="cover-subtitle glitch" data-text="UNIVERSO">UNIVERSO</h2>
+                        <h4 class="Name" data-text="By: Luizinho">By: Luiz Felipe</h4>
+                        <div class="cover-art">
+                            <div class="art-grid"></div>
+
+                            <!-- Floating Mini Cards Silhouette Collage -->
+                            <div class="mini-card mc-turing">
+                                <div class="mc-avatar">SOL</div>
+                                <span class="mc-num">#05</span>
+                            </div>
+                            <div class="mini-card mc-guido">
+                                <div class="mc-avatar">TER</div>
+                                <span class="mc-num">#03</span>
+                            </div>
+                            <div class="mini-card mc-jobs">
+                                <div class="mc-avatar">JUP</div>
+                                <span class="mc-num">#06</span>
+                            </div>
+
+                            <!-- Central Glowing 3D Tech Sphere -->
+                            <div class="tech-sphere">
+                                <div class="sphere-core">
+                                    <svg class="art-logo" viewBox="0 0 24 24">
+                                        <path d="M12 2L2 22h20L12 2zm0 4l6.5 13h-13L12 6z" />
+                                    </svg>
+                                </div>
+                                <div class="sphere-ring ring-1"></div>
+                                <div class="sphere-ring ring-2"></div>
+                            </div>
+                        </div>
+                        <p class="cover-footer-text">A EXPLORAÇÃO DOS MISTÉRIOS DO COSMOS</p>
+                    </div>
+                    <div class="cover-footer">
+                        <span>2026 EDIÇÃO CÓSMICA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINA 1: SISTEMA SOLAR INTERNO -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-ia">PLANETAS</span>
+                        <h3 class="page-title">Sistema Solar Interno</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#01</div>
+                            <div class="slot-name">Mercúrio</div>
+                            <div class="slot-role">O planeta mais próximo do Sol e o menor do Sistema Solar</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#02</div>
+                            <div class="slot-name">Vênus</div>
+                            <div class="slot-role">Planeta extremamente quente com atmosfera densa e tóxica</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#03</div>
+                            <div class="slot-name">Terra</div>
+                            <div class="slot-role">O nosso lar azul, o único conhecido a abrigar vida</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#04</div>
+                            <div class="slot-name">Marte</div>
+                            <div class="slot-role">O planeta vermelho, alvo de futuras missões humanas</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#05</div>
+                            <div class="slot-name">Sol</div>
+                            <div class="slot-role">A estrela central que sustenta a vida em nosso sistema</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 1</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 2: SISTEMA SOLAR EXTERNO -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-python">PLANETAS</span>
+                        <h3 class="page-title">Sistema Solar Externo</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#06</div>
+                            <div class="slot-name">Júpiter</div>
+                            <div class="slot-role">O maior planeta do sistema, com a sua Grande Mancha Vermelha</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#07</div>
+                            <div class="slot-name">Saturno</div>
+                            <div class="slot-role">Famoso por seu espetacular e brilhante sistema de anéis</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#08</div>
+                            <div class="slot-name">Urano</div>
+                            <div class="slot-role">O gigante de gelo que orbita inclinado quase de lado</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#09</div>
+                            <div class="slot-name">Netuno</div>
+                            <div class="slot-role">O planeta mais distante do Sol, açoitado por ventos supersônicos
+                            </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#10</div>
+                            <div class="slot-name">Plutão</div>
+                            <div class="slot-role">O famoso planeta anão gelado do Cinturão de Kuiper</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 2</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 3: ESTRELAS E NEBULOSAS -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-db">ESTRELAS</span>
+                        <h3 class="page-title">Estrelas & Nebulosas</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#11</div>
+                            <div class="slot-name">Nebulosa de Órion</div>
+                            <div class="slot-role">Um berçário estelar brilhante visível a olho nu na constelação</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#12</div>
+                            <div class="slot-name">Nebulosa da Hélice</div>
+                            <div class="slot-role">Nebulosa planetária gigante, apelidada de "Olho de Deus"</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#13</div>
+                            <div class="slot-name">Sirius</div>
+                            <div class="slot-role">A estrela mais brilhante do nosso céu noturno terrestre</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#14</div>
+                            <div class="slot-name">Betelgeuse</div>
+                            <div class="slot-role">Uma supergigante vermelha massiva na constelação de Órion</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#15</div>
+                            <div class="slot-name">Próxima Centauri</div>
+                            <div class="slot-role">A estrela mais próxima do nosso próprio Sol, a 4,24 anos-luz</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 3</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 4: GALÁXIAS -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-os">GALÁXIAS</span>
+                        <h3 class="page-title">Galáxias do Universo</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#16</div>
+                            <div class="slot-name">Via Láctea</div>
+                            <div class="slot-role">Nossa galáxia espiral que contém bilhões de estrelas e planetas</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#17</div>
+                            <div class="slot-name">Andrômeda</div>
+                            <div class="slot-role">A grande galáxia espiral vizinha em rota de colisão futura com a
+                                nossa</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#18</div>
+                            <div class="slot-name">Galáxia do Sombrero</div>
+                            <div class="slot-role">Conhecida por seu núcleo brilhante e banda de poeira escura</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#19</div>
+                            <div class="slot-name">Galáxia do Triângulo</div>
+                            <div class="slot-role">A terceira maior galáxia do nosso Grupo Local</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#20</div>
+                            <div class="slot-name">Nuvem de Magalhães</div>
+                            <div class="slot-role">Galáxia satélite anã irregular que orbita a Via Láctea</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 4</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 5: MISTÉRIOS CÓSMICOS -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">FENÔMENOS</span>
+                        <h3 class="page-title">Mistérios & Fenômenos Cósmicos</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#21</div>
+                            <div class="slot-name">Sagitário A*</div>
+                            <div class="slot-role">O buraco negro supermassivo que habita o centro da Via Láctea</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#22</div>
+                            <div class="slot-name">Quasar</div>
+                            <div class="slot-role">Núcleo galáctico ativo extremamente energético e luminoso</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#23</div>
+                            <div class="slot-name">Estrela de Nêutrons</div>
+                            <div class="slot-role">O resto ultradenso do colapso de uma estrela massiva</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#24</div>
+                            <div class="slot-name">Supernova</div>
+                            <div class="slot-role">A explosão cataclísmica que marca a morte de uma estrela</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#25</div>
+                            <div class="slot-name">Matéria Escura</div>
+                            <div class="slot-role">Substância invisível que compõe a maior parte da massa do Universo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 5</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 6: EXPLORAÇÃO ESPACIAL -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">EXPLORAÇÃO</span>
+                        <h3 class="page-title">Exploração do Espaço</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#26</div>
+                            <div class="slot-name">Telescópio James Webb</div>
+                            <div class="slot-role">O maior e mais poderoso telescópio espacial infravermelho</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#27</div>
+                            <div class="slot-name">Telescópio Hubble</div>
+                            <div class="slot-role">Revolucionou a astronomia com imagens incríveis do espaço profundo
+                            </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#28</div>
+                            <div class="slot-name">Sonda Voyager 1</div>
+                            <div class="slot-role">O objeto feito pelo ser humano mais distante da Terra, no espaço
+                                interestelar</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#29</div>
+                            <div class="slot-name">Rover Curiosity</div>
+                            <div class="slot-role">Robô que explora a cratera Gale em Marte buscando sinais de vida
+                            </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#30</div>
+                            <div class="slot-name">Você no Espaço</div>
+                            <div class="slot-role">Coloque a sua foto como astronauta aqui!</div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 6</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 7: CONTRACAPA -->
+            <div class="page page-cover-back" data-density="hard">
+                <div class="page-content cover-back-content">
+                    <div class="cover-back-header">
+                        <h2>ALURA UNIVERSO</h2>
+                    </div>
+                    <div class="cover-back-body">
+                        <div class="tech-logo-collage">
+                            <span>SISTEMA SOLAR</span> • <span>ESTRELAS</span> • <span>NEBULOSAS</span> •
+                            <span>GALÁXIAS</span> • <span>EXPLORAÇÃO</span>
+                        </div>
+                        <p class="summary-text">
+                            O Alura Album - Universo é uma jornada interativa pela vastidão do cosmos, reunindo planetas
+                            fascinantes, estrelas distantes, galáxias misteriosas e os maiores marcos da nossa
+                            exploração espacial.
+                        </p>
+                        <div class="barcode-container">
+                            <div class="barcode">
+                                <!-- Simulated barcode lines -->
+                                <div class="bar"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar"></div>
+                                <div class="bar thick"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar"></div>
+                                <div class="bar thick"></div>
+                                <div class="bar"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar thick"></div>
+                            </div>
+                            <span class="barcode-number">9 788575 228494</span>
+                        </div>
+                    </div>
+                    <div class="cover-back-footer">
+                        <span>Edição Cósmica • Alura • 2026</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Page Flip Library -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <!-- Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
